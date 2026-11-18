@@ -1,0 +1,1116 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+  --gold: #d5b477;
+  --gold-light: #f1d9a5;
+  --black: #090909;
+  --glass: rgba(255,255,255,.055);
+  --glass-border: rgba(255,255,255,.14);
+  --text: #f5f1e9;
+  --muted: #aaa49a;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #f6f7fb;
+  color: #20243a;
+  font-family: 'Inter', sans-serif;
+}
+
+.tc-studio {
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* BACKGROUND */
+
+.tc-studio {
+  min-height: 100vh;
+  padding: 35px 16px 55px;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(169,126,59,.18), transparent 42%),
+    radial-gradient(circle at 0% 55%, rgba(111,84,43,.12), transparent 35%),
+    linear-gradient(145deg,#080808,#15130f 55%,#080808);
+  position: relative;
+  overflow: hidden;
+}
+
+.tc-studio::before {
+  content: "";
+  position: fixed;
+  width: 350px;
+  height: 350px;
+  top: 25%;
+  right: -180px;
+  border-radius: 50%;
+  background: rgba(205,165,91,.09);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+/* MAIN CARD */
+
+.tc-profile-card {
+  width: min(100%,470px);
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(220,184,119,.27);
+  border-radius: 25px;
+  background: rgba(22,21,19,.79);
+  box-shadow: 0 25px 90px rgba(0,0,0,.65),
+              0 0 50px rgba(193,148,76,.07);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+}
+
+/* COVER */
+
+.tc-cover {
+  height: 245px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg,#403321,#15120d 65%,#080808);
+}
+
+.tc-cover > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.tc-cover-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom,
+      rgba(0,0,0,.15),
+      rgba(0,0,0,.35) 55%,
+      rgba(9,9,9,.96)),
+    linear-gradient(120deg,rgba(180,137,66,.16),transparent);
+}
+
+/* BRAND POSITIONING */
+
+.tc-profile-brand {
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  left: 21px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #f1dfb9;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.tc-brand-mark {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(223,188,126,.7);
+  border-radius: 10px;
+  color: var(--gold-light);
+  font-family: 'Playfair Display',serif;
+  font-size: 19px;
+  background: rgba(255,255,255,.09);
+  backdrop-filter: blur(15px);
+}
+
+/* FIXED COVER CAPTION */
+
+.tc-cover-caption {
+  position: absolute;
+  z-index: 2;
+  left: 22px;
+  right: 22px;
+  bottom: 27px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+  color: rgba(255,244,220,.78);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 1.5;
+}
+
+.tc-cover-line {
+  display: block;
+  width: 45px;
+  height: 1px;
+  background: var(--gold);
+}
+
+/* BUSINESS INTRO */
+
+.tc-profile-intro {
+  position: relative;
+  padding: 0 28px 25px;
+  text-align: center;
+  margin-top: -56px;
+  z-index: 2;
+}
+
+.tc-logo {
+  width: 105px;
+  height: 105px;
+  margin: 0 auto 19px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  background: linear-gradient(145deg,#393024,#141210);
+  box-shadow: 0 0 0 7px rgba(213,180,119,.09),
+              0 12px 35px rgba(0,0,0,.6);
+  color: var(--gold-light);
+  font: 600 42px 'Playfair Display',serif;
+}
+
+.tc-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tc-category {
+  display: inline-block;
+  padding: 7px 15px;
+  border: 1px solid rgba(213,180,119,.36);
+  border-radius: 30px;
+  color: var(--gold-light);
+  background: rgba(213,180,119,.08);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.tc-profile-intro h1 {
+  margin: 17px 0 9px;
+  color: #f7f0e3;
+  font: 600 34px/1.15 'Playfair Display',serif;
+}
+
+.tc-address {
+  color: #b5aa98;
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 9px 0;
+}
+
+.tc-description {
+  max-width: 350px;
+  margin: 16px auto 0;
+  color: #aaa49a;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.tc-intro-rule {
+  width: 58px;
+  height: 1px;
+  margin: 26px auto 20px;
+  background: linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+
+.tc-section-eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--gold);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.tc-connect-heading h2,
+.tc-map-heading h2 {
+  margin: 0;
+  color: var(--gold-light);
+  font: 500 24px 'Playfair Display',serif;
+}
+
+.tc-connect-heading p {
+  margin: 8px 0 0;
+  color: #aaa49a;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* GLASS ACTION CARDS */
+
+.tc-links {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 13px;
+  padding: 10px 23px 29px;
+}
+
+.tc-action-card {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 13px 16px;
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  background: linear-gradient(120deg,
+    rgba(255,255,255,.075),
+    rgba(255,255,255,.025));
+  color: var(--text);
+  text-decoration: none;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
+  transition: transform .25s ease, border-color .25s ease, background .25s ease;
+}
+
+.tc-action-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(213,180,119,.5);
+  background: rgba(255,255,255,.09);
+}
+
+.tc-link-icon {
+  width: 45px;
+  height: 45px;
+  flex: 0 0 45px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.14);
+  color: white;
+}
+
+.tc-link-icon svg {
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+
+.tc-link-copy {
+  display: grid;
+  gap: 5px;
+}
+
+.tc-link-copy strong {
+  color: #f4eee4;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tc-link-copy small {
+  color: #aaa19a;
+  font-size: 11px;
+}
+
+.tc-link-arrow {
+  margin-left: auto;
+  color: var(--gold);
+  font-size: 20px;
+  transition: transform .2s ease;
+}
+
+.tc-action-card:hover .tc-link-arrow {
+  transform: translate(3px,-3px);
+}
+
+/* PLATFORM BRAND COLOURS */
+
+.tc-whatsapp .tc-link-icon {
+  color: #25D366;
+  background: rgba(37,211,102,.12);
+  border-color: rgba(37,211,102,.42);
+}
+
+.tc-whatsapp:hover {
+  border-color: rgba(37,211,102,.48);
+}
+
+.tc-instagram .tc-link-icon {
+  color: #F77737;
+  background: linear-gradient(145deg,
+    rgba(254,218,117,.15),
+    rgba(221,42,123,.15),
+    rgba(129,52,175,.18));
+  border-color: rgba(221,42,123,.5);
+}
+
+.tc-instagram:hover {
+  border-color: rgba(221,42,123,.55);
+}
+
+.tc-google .tc-link-icon {
+  background: rgba(255,255,255,.09);
+  border-color: rgba(66,133,244,.45);
+}
+
+.tc-call .tc-link-icon {
+  color: #60A5FA;
+  background: rgba(59,130,246,.13);
+  border-color: rgba(59,130,246,.45);
+}
+
+.tc-call:hover {
+  border-color: rgba(59,130,246,.5);
+}
+
+.tc-website .tc-link-icon {
+  color: #B69CFF;
+  background: rgba(139,92,246,.14);
+  border-color: rgba(139,92,246,.42);
+}
+
+/* LOCATION */
+
+.tc-map-section {
+  padding: 25px 23px;
+  border-top: 1px solid rgba(255,255,255,.09);
+  background: rgba(255,255,255,.018);
+}
+
+.tc-map-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.tc-map-heading p {
+  margin: 7px 0 0;
+  color: #aaa19a;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.tc-map-pin {
+  color: var(--gold);
+  font-size: 26px;
+}
+
+.tc-map-frame {
+  overflow: hidden;
+  border: 1px solid rgba(213,180,119,.22);
+  border-radius: 15px;
+}
+
+.tc-map-section iframe {
+  display: block;
+  width: 100%;
+  height: 190px;
+  border: 0;
+  filter: grayscale(.55) contrast(1.05);
+}
+
+.tc-directions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 13px;
+  padding: 14px;
+  border: 1px solid rgba(213,180,119,.55);
+  border-radius: 13px;
+  background: linear-gradient(110deg,
+    rgba(213,180,119,.19),
+    rgba(213,180,119,.06));
+  color: var(--gold-light);
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* FOOTER */
+
+.tc-profile-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 21px 15px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  color: #817a70;
+  font-size: 10px;
+}
+
+.tc-footer-mark {
+  width: 23px;
+  height: 23px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  border: 1px solid rgba(213,180,119,.5);
+  color: var(--gold);
+  font-family: 'Playfair Display',serif;
+}
+
+.tc-profile-footer strong {
+  color: var(--gold-light);
+}
+
+.tc-studio-footnote {
+  max-width: 470px;
+  margin: 18px auto 0;
+  color: #777066;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.tc-studio-message {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 25px;
+  background: #090909;
+  color: var(--gold-light);
+}
+
+/* MOBILE */
+
+@media (max-width: 520px) {
+  .tc-studio {
+    padding: 12px 10px 35px;
+  }
+
+  .tc-profile-card {
+    border-radius: 20px;
+  }
+
+  .tc-cover {
+    height: 210px;
+  }
+
+  .tc-cover-caption {
+    bottom: 22px;
+    left: 19px;
+  }
+
+  .tc-profile-intro {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .tc-profile-intro h1 {
+    font-size: 30px;
+  }
+
+  .tc-links {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .tc-map-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .tc-logo {
+    width: 95px;
+    height: 95px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tc-studio *,
+  .tc-studio *::before,
+  .tc-studio *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* =====================================
+   TAPCONNECT — COMPACT MOBILE EXPERIENCE
+===================================== */
+
+/* Smooth page navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+.tc-studio {
+  scroll-behavior: smooth;
+}
+
+/* Reduce unnecessary vertical space */
+.tc-cover {
+  height: 165px;
+}
+
+.tc-cover-caption {
+  bottom: 18px;
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+.tc-profile-intro {
+  margin-top: -43px;
+  padding-bottom: 15px;
+}
+
+.tc-logo {
+  width: 82px;
+  height: 82px;
+  margin-bottom: 12px;
+  font-size: 34px;
+}
+
+.tc-category {
+  padding: 5px 12px;
+}
+
+.tc-profile-intro h1 {
+  margin: 11px 0 6px;
+  font-size: 29px;
+  line-height: 1.12;
+}
+
+.tc-address {
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+.tc-description {
+  margin-top: 10px;
+  line-height: 1.55;
+  font-size: 12px;
+}
+
+.tc-intro-rule {
+  margin: 16px auto 13px;
+  width: 45px;
+}
+
+.tc-connect-heading h2 {
+  font-size: 22px;
+}
+
+.tc-connect-heading p {
+  margin-top: 5px;
+  font-size: 11px;
+}
+
+/* Make quick links more compact */
+.tc-links {
+  gap: 9px;
+  padding: 5px 20px 22px;
+}
+
+.tc-action-card {
+  min-height: 65px;
+  padding: 9px 12px;
+  gap: 12px;
+  border-radius: 15px;
+}
+
+.tc-link-icon {
+  width: 39px;
+  height: 39px;
+  flex-basis: 39px;
+  border-radius: 12px;
+}
+
+.tc-link-icon svg {
+  width: 23px;
+  height: 23px;
+}
+
+.tc-link-copy {
+  gap: 3px;
+}
+
+.tc-link-copy strong {
+  font-size: 13px;
+}
+
+.tc-link-copy small {
+  font-size: 10px;
+}
+
+/* Mobile-specific refinements */
+@media (max-width: 520px) {
+  .tc-studio {
+    padding: 8px 8px 25px;
+  }
+
+  .tc-profile-card {
+    border-radius: 18px;
+  }
+
+  .tc-cover {
+    height: 145px;
+  }
+
+  .tc-profile-brand {
+    top: 14px;
+    left: 15px;
+  }
+
+  .tc-cover-caption {
+    left: 15px;
+    right: 15px;
+    bottom: 13px;
+  }
+
+  .tc-profile-intro {
+    margin-top: -38px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+  }
+
+  .tc-logo {
+    width: 76px;
+    height: 76px;
+    margin-bottom: 10px;
+    font-size: 31px;
+  }
+
+  .tc-profile-intro h1 {
+    font-size: 26px;
+  }
+
+  .tc-description {
+    max-width: 330px;
+    margin-top: 8px;
+    font-size: 11px;
+  }
+
+  .tc-intro-rule {
+    margin: 13px auto 11px;
+  }
+
+  .tc-section-eyebrow {
+    margin-bottom: 5px;
+    font-size: 8px;
+  }
+
+  .tc-connect-heading h2 {
+    font-size: 21px;
+  }
+
+  .tc-connect-heading p {
+    font-size: 10px;
+  }
+
+  .tc-links {
+    padding: 5px 12px 20px;
+    gap: 8px;
+  }
+
+  .tc-action-card {
+    min-height: 62px;
+    padding: 8px 11px;
+  }
+
+  .tc-link-icon {
+    width: 37px;
+    height: 37px;
+    flex-basis: 37px;
+  }
+
+  .tc-map-section {
+    padding: 20px 14px;
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+
+/* ==========================================
+   TAPCONNECT V1.1
+   SECTION: FROSTED GLASS BUSINESS MONOGRAM
+   ========================================== */
+
+.tc-logo {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  width: 105px;
+  height: 105px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.48),
+      rgba(255, 255, 255, 0.12) 48%,
+      rgba(255, 255, 255, 0.24)
+    );
+
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.25),
+    0 2px 8px rgba(255, 255, 255, 0.12),
+    inset 0 1px 2px rgba(255, 255, 255, 0.7),
+    inset 0 -2px 5px rgba(0, 0, 0, 0.08);
+
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+  font-size: 43px;
+  font-weight: 600;
+
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Glass reflection */
+.tc-logo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.38),
+      transparent 42%,
+      rgba(255, 255, 255, 0.08)
+    );
+
+  pointer-events: none;
+}
+
+/* Soft light reflection */
+.tc-logo::after {
+  content: "";
+  position: absolute;
+  top: -35%;
+  left: -20%;
+
+  width: 85%;
+  height: 65%;
+
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  filter: blur(18px);
+
+  pointer-events: none;
+}
+
+/* Keep an uploaded logo visible */
+.tc-logo img {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+/* Subtle interaction */
+.tc-logo:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.32),
+    inset 0 1px 3px rgba(255, 255, 255, 0.8);
+}
+
+/* Mobile sizing */
+@media (max-width: 520px) {
+  .tc-logo {
+    width: 82px;
+    height: 82px;
+    border-radius: 25px;
+    font-size: 35px;
+  }
+}
+
+
+/* ==========================================
+   TAPCONNECT V1.6
+   REVIEW-FIRST GLASS PANEL
+   BLACK & GOLD THEME
+   ========================================== */
+
+.tc-review-section {
+  padding: 8px 23px 25px;
+}
+
+.tc-review-panel {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: 27px 20px 23px;
+
+  border: 1px solid rgba(213,180,119,0.42);
+  border-radius: 22px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.105),
+    rgba(255,255,255,0.035) 55%,
+    rgba(213,180,119,0.055)
+  );
+
+  backdrop-filter: blur(30px) saturate(160%);
+  -webkit-backdrop-filter: blur(30px) saturate(160%);
+
+  box-shadow:
+    0 16px 40px rgba(0,0,0,0.28),
+    inset 0 1px 2px rgba(255,255,255,0.20);
+}
+
+.tc-review-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.10),
+    transparent 48%,
+    rgba(213,180,119,0.07)
+  );
+
+  pointer-events: none;
+}
+
+.tc-review-icon {
+  width: 49px;
+  height: 49px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 15px;
+
+  border: 1px solid rgba(213,180,119,0.35);
+  border-radius: 15px;
+
+  background: rgba(255,255,255,0.075);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.tc-review-icon svg {
+  width: 27px;
+  height: 27px;
+}
+
+.tc-review-eyebrow {
+  color: var(--gold);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.tc-review-panel h2 {
+  margin: 13px 0 7px;
+
+  color: var(--gold-light);
+  font: 500 24px 'Playfair Display', serif;
+}
+
+.tc-review-panel p {
+  margin: 0 0 19px;
+
+  color: #c5bdb1;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.tc-review-button {
+  width: 100%;
+  min-height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+
+  padding: 13px 15px;
+
+  border: 1px solid rgba(255,255,255,0.32);
+  border-radius: 14px;
+
+  background: linear-gradient(
+    110deg,
+    #d5b477,
+    #ebd19e
+  );
+
+  color: #17130c;
+  text-decoration: none;
+
+  box-shadow:
+    0 8px 22px rgba(0,0,0,0.25),
+    inset 0 1px 2px rgba(255,255,255,0.55);
+
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.tc-review-button svg {
+  width: 23px;
+  height: 23px;
+  flex-shrink: 0;
+}
+
+.tc-review-button strong {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.tc-review-button > span {
+  margin-left: auto;
+  font-size: 19px;
+}
+
+.tc-review-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.32);
+}
+
+.tc-review-panel small {
+  margin-top: 14px;
+  color: #aaa49a;
+  font-size: 10px;
+}
+
+@media (max-width: 520px) {
+  .tc-review-section {
+    padding: 5px 12px 21px;
+  }
+
+  .tc-review-panel {
+    padding: 23px 16px 20px;
+  }
+
+  .tc-review-panel h2 {
+    font-size: 22px;
+  }
+}
+
+/* ==========================================
+   TAPCONNECT V1.6.1
+   COMPACT GOOGLE REVIEW PANEL
+   ========================================== */
+
+.tc-review-section {
+  padding: 3px 23px 17px;
+}
+
+.tc-review-panel {
+  padding: 17px 17px 15px;
+  border-radius: 18px;
+}
+
+.tc-review-icon {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 9px;
+  border-radius: 11px;
+}
+
+.tc-review-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.tc-review-eyebrow {
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+.tc-review-panel h2 {
+  margin: 7px 0 4px;
+  font-size: 20px;
+}
+
+.tc-review-panel p {
+  margin-bottom: 12px;
+  font-size: 11px;
+}
+
+.tc-review-button {
+  min-height: 43px;
+  padding: 9px 12px;
+  border-radius: 12px;
+  gap: 8px;
+}
+
+.tc-review-button svg {
+  width: 19px;
+  height: 19px;
+}
+
+.tc-review-button strong {
+  font-size: 12px;
+}
+
+.tc-review-panel small {
+  margin-top: 9px;
+  font-size: 9px;
+}
+
+@media (max-width: 520px) {
+  .tc-review-section {
+    padding: 2px 12px 15px;
+  }
+
+  .tc-review-panel {
+    padding: 15px 14px 13px;
+  }
+
+  .tc-review-panel h2 {
+    font-size: 19px;
+  }
+}
+
+
+
+
+
+
